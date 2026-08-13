@@ -1,16 +1,22 @@
-## Hi there 👋
+# ⚡ Welcome to Nadim Cyber-X Official Profile ⚡
 
-<!--
-**nadim-cyberxfree/nadim-cyberxfree** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+### 👨‍💻 About Me
+* 🔭 Currently working on **Ethical Hacking & Cyber Security Tools**
+* 💬 Ask me about **Cyber Security, Web Simulation, and Pentesting**
+* ⚡ Fun fact: I build interactive hacking tools!
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### 🚨 SPECIAL NOTICE
+> **রিয়েল সাইবার সিকিউরিটি বা এথিক্যাল হ্যাকিং শিখতে চাইলে হোয়াটসঅ্যাপ করুন:**  
+> 📲 **WhatsApp:** [01629462090](https://wa.me/8801629462090)
+
+---
+
+### 🛠️ Skills & Technologies
+- **Cyber Security:** Ethical Hacking, OSINT, Port Scanning, SQLi
+- **Web Development:** HTML5, CSS3, JavaScript
+- **Tools:** Kali Linux, Nmap, Metasploit, Wireshark
+
+---
+*Owner: Nahidul Islam Nadim*
