@@ -1,22 +1,572 @@
-# ⚡ Welcome to Nadim Cyber-X Official Profile ⚡
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NADIM CYBER-X FREE v4.0</title>
+    <style>
+        :root {
+            --bg-color: #050b08;
+            --main-green: #00ff66;
+            --dim-green: #00aa44;
+            --dark-card: rgba(10, 25, 15, 0.85);
+            --border-glow: #00ff6644;
+            --alert-red: #ff3333;
+        }
 
-### 👨‍💻 About Me
-* 🔭 Currently working on **Ethical Hacking & Cyber Security Tools**
-* 💬 Ask me about **Cyber Security, Web Simulation, and Pentesting**
-* ⚡ Fun fact: I build interactive hacking tools!
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
 
----
+        body {
+            background-color: var(--bg-color);
+            color: var(--main-green);
+            min-height: 100vh;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+        }
 
-### 🚨 SPECIAL NOTICE
-> **রিয়েল সাইবার সিকিউরিটি বা এথিক্যাল হ্যাকিং শিখতে চাইলে হোয়াটসঅ্যাপ করুন:**  
-> 📲 **WhatsApp:** [01629462090](https://wa.me/8801629462090)
+        #matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            opacity: 0.15;
+        }
 
----
+        header {
+            background: rgba(0, 15, 5, 0.9);
+            border-bottom: 2px solid var(--main-green);
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 15px rgba(0, 255, 102, 0.2);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
 
-### 🛠️ Skills & Technologies
-- **Cyber Security:** Ethical Hacking, OSINT, Port Scanning, SQLi
-- **Web Development:** HTML5, CSS3, JavaScript
-- **Tools:** Kali Linux, Nmap, Metasploit, Wireshark
+        .header-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 8px var(--main-green);
+        }
 
----
-*Owner: Nahidul Islam Nadim*
+        .owner-info {
+            background: rgba(0, 255, 102, 0.1);
+            border: 1px solid var(--main-green);
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .owner-info span {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .course-note {
+            background: rgba(255, 0, 85, 0.15);
+            border: 1px solid #ff0055;
+            color: #fff;
+            padding: 12px 20px;
+            margin: 15px 20px 0 20px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(255, 0, 85, 0.3);
+            font-size: 0.95rem;
+        }
+
+        .course-note a {
+            color: #00ff66;
+            font-weight: bold;
+            text-decoration: underline;
+            margin-left: 5px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 15px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .sidebar {
+            background: var(--dark-card);
+            border: 1px solid var(--dim-green);
+            border-radius: 5px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+        }
+
+        .sidebar h3 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            border-bottom: 1px dashed var(--dim-green);
+            padding-bottom: 5px;
+            color: #fff;
+        }
+
+        .menu-btn {
+            background: rgba(0, 40, 15, 0.6);
+            color: var(--main-green);
+            border: 1px solid var(--dim-green);
+            padding: 10px;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .menu-btn:hover, .menu-btn.active {
+            background: var(--main-green);
+            color: #000;
+            font-weight: bold;
+            box-shadow: 0 0 10px var(--main-green);
+        }
+
+        .main-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .control-box {
+            background: var(--dark-card);
+            border: 1px solid var(--dim-green);
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .control-box h2 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        input[type="text"] {
+            background: #000;
+            border: 1px solid var(--main-green);
+            color: var(--main-green);
+            padding: 10px;
+            flex-grow: 1;
+            outline: none;
+            font-size: 0.9rem;
+        }
+
+        .action-btn {
+            background: var(--main-green);
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: 0.2s;
+        }
+
+        .action-btn:hover {
+            background: #fff;
+            box-shadow: 0 0 10px #fff;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            background: #000;
+            border: 1px solid var(--dim-green);
+            height: 20px;
+            margin-bottom: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            background: var(--main-green);
+            transition: width 0.1s linear;
+        }
+
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #000;
+            font-weight: bold;
+            font-size: 0.8rem;
+            mix-blend-mode: difference;
+        }
+
+        .terminal {
+            background: #000;
+            border: 1px solid var(--main-green);
+            border-radius: 5px;
+            padding: 15px;
+            height: 320px;
+            overflow-y: auto;
+            box-shadow: inset 0 0 15px rgba(0, 255, 102, 0.15);
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .terminal-line {
+            margin-bottom: 4px;
+            word-break: break-all;
+        }
+
+        .terminal-line.info { color: #88ff88; }
+        .terminal-line.warn { color: #ffff55; }
+        .terminal-line.danger { color: var(--alert-red); }
+        .terminal-line.success { color: #00ffff; font-weight: bold; }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: rgba(0,10,5,0.9);
+            border-top: 1px solid var(--dim-green);
+            font-size: 0.8rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="matrix-bg"></canvas>
+
+    <header>
+        <div class="header-title">⚡ NADIM CYBER-X FREE</div>
+        <div class="owner-info">
+            OWNER: <span>NAHIDUL ISLAM NADIM</span> | WHATSAPP: <span>01629462090</span>
+        </div>
+    </header>
+
+    <!-- Course Call-to-Action Note -->
+    <div class="course-note">
+        🚨 <span style="color: #ff3366; font-weight: bold;">SPECIAL NOTE:</span> সাইবার কোর্স বা এথিক্যাল হ্যাকিং শিখতে চাইলে হোয়াটসঅ্যাপ করুন: 
+        <a href="https://wa.me/8801629462090" target="_blank">01629462090</a> 📲
+    </div>
+
+    <div class="container">
+        <!-- Sidebar Menu -->
+        <div class="sidebar">
+            <h3>CYBER MODULES</h3>
+            <button class="menu-btn active" onclick="switchModule('recon')">🔍 Recon & Port Scan</button>
+            <button class="menu-btn" onclick="switchModule('ddos')">💥 DDoS Attack Vector</button>
+            <button class="menu-btn" onclick="switchModule('wifi')">📡 WiFi WPA2 Cracker</button>
+            <button class="menu-btn" onclick="switchModule('sqli')">💉 Facebook Hack</button>
+            <button class="menu-btn" onclick="switchModule('phish')">🎣 Phishing Trap Gen</button>
+            <button class="menu-btn" onclick="switchModule('ransom')">🔒 Ransomware Encryptor</button>
+            <button class="menu-btn" onclick="switchModule('keylog')">⌨️ Keylogger Stream</button>
+            <button class="menu-btn" onclick="switchModule('osint')">🕵️ OSINT & Tracker</button>
+            <button class="menu-btn" onclick="switchModule('satellite')">🛰️ Satellite Intercept</button>
+        </div>
+
+        <!-- Main Panel -->
+        <div class="main-panel">
+            <div class="control-box">
+                <h2 id="module-title">🔍 RECON & PORT SCANNER</h2>
+                <div class="input-group">
+                    <input type="text" id="target-input" placeholder="Enter Target IP / Domain (e.g., target-node.com)">
+                    <button class="action-btn" id="exec-btn" onclick="runAttack()">EXECUTE SIMULATION</button>
+                </div>
+
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="p-bar"></div>
+                    <div class="progress-text" id="p-text">SYSTEM IDLE - 0%</div>
+                </div>
+            </div>
+
+            <!-- Terminal Output -->
+            <div class="terminal" id="terminal">
+                <div class="terminal-line success">[SYSTEM INITIALIZED] Welcome, Operator Nahidul Islam Nadim.</div>
+                <div class="terminal-line warn">[NOTICE] Real Cyber Security & Ethical Hacking Course শিখতে WhatsApp করুন: 01629462090</div>
+                <div class="terminal-line info">[READY] Select a cyber module and input target parameters to execute.</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 NADIM CYBER-X TOOLKIT. Educational & Visual Simulation Interface.
+    </footer>
+
+    <script>
+        // Matrix Background Effect
+        const canvas = document.getElementById('matrix-bg');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
+        const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*';
+        const alphabet = katakana + latin;
+        const fontSize = 16;
+        const columns = Math.floor(canvas.width / fontSize);
+        const rainDrops = Array(columns).fill(1);
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(5, 11, 8, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#00ff66';
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < rainDrops.length; i++) {
+                const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+                if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    rainDrops[i] = 0;
+                }
+                rainDrops[i]++;
+            }
+        }
+        setInterval(drawMatrix, 30);
+
+        // Modules Config
+        let currentModule = 'recon';
+        let isRunning = false;
+
+        const modules = {
+            recon: {
+                title: "🔍 RECON & PORT SCANNER",
+                placeholder: "Target Domain/IP (e.g. 192.168.1.100)",
+                defaultTarget: "target-corp.internal",
+                logs: [
+                    "Initializing Nmap 8.92 engine...",
+                    "Resolving target hostname...",
+                    "Scanning Top 1000 TCP Ports...",
+                    "Port 21/tcp OPEN (vsftpd 3.0.3)",
+                    "Port 22/tcp OPEN (OpenSSH 8.2p1)",
+                    "Port 80/tcp OPEN (Apache httpd 2.4.41)",
+                    "Port 443/tcp OPEN (SSL/TLS - Cert Valid)",
+                    "Port 3306/tcp OPEN (MySQL 5.7.31)",
+                    "OS Fingerprint: Linux 5.x Kernel detected.",
+                    "Reconnaissance complete! 5 Vulnerable entry points identified."
+                ]
+            },
+            ddos: {
+                title: "💥 DDOS ATTACK VECTOR SIMULATOR",
+                placeholder: "Target Server IP (e.g. 104.21.88.12)",
+                defaultTarget: "104.21.88.12",
+                logs: [
+                    "Allocating Botnet Nodes (12,450 active bots)...",
+                    "Launching HTTP GET Flood Vector...",
+                    "Sending 45,000 UDP Packet Requests/sec...",
+                    "Target latency spiked from 24ms -> 840ms",
+                    "Bandwidth saturation at 8.4 Gbps...",
+                    "Target HTTP 503 Service Unavailable received!",
+                    "Server Connection Timed Out. Target Offline!"
+                ]
+            },
+            wifi: {
+                title: "📡 WIFI WPA2/WPA3 CRACKER",
+                placeholder: "Target SSID (e.g. Home_WiFi_5G)",
+                defaultTarget: "TP-Link_Secure_9A",
+                logs: [
+                    "Putting interface wlan0mon into Monitor Mode...",
+                    "Scanning 2.4GHz / 5GHz channels...",
+                    "Target AP Found! BSSID: E4:95:6E:4B:91:20",
+                    "Sending Deauth packets to force handshake...",
+                    "WPA2 Handshake Captured Successfully!",
+                    "Loading RockYou.txt Wordlist (14,344,391 keys)...",
+                    "Brute-forcing key hashes...",
+                    "KEY FOUND! Password: 'পাসওয়ার্ড পেতে পেইড ভার্সন ক্রয় করুন'"
+                ]
+            },
+            sqli: {
+                title: "💉 FACEBOOK HACK URL",
+                placeholder: "Target URL (e.g. http://site.com/product.php?id=1)",
+                defaultTarget: "http://vulnerable-shop.com/view.php?id=10",
+                logs: [
+                    "Testing parameter 'id' for Boolean-based Blind SQLi...",
+                    "Parameter vulnerabilities CONFIRMED!",
+                    "Determining Database Engine: MySQL 8.0...",
+                    "Extracting Database Names: ['information_schema', 'shop_db']...",
+                    "Dumping Table: 'users'...",
+                    "Extracted 1,240 records [Username, Password_Hash, Email]",
+                    "Admin Credentials Found:পাসওয়ার্ড পেতে পেইড ভার্সন ক্রয় করুন...",
+                    "Database extraction complete!"
+                ]
+            },
+            phish: {
+                title: "🎣 PHISHING TRAP GENERATOR",
+                placeholder: "Template Select (Facebook, Google, Instagram)",
+                defaultTarget: "Instagram Login Portal",
+                logs: [
+                    "Spinning up Ngrok Tunnel on Port 8080...",
+                    "Cloning target interface CSS/JS components...",
+                    "Injecting credential capture script...",
+                    "Phishing Trap Active: https://secure-auth-login.ngrok-free.app",
+                    "Awaiting target victim interaction...",
+                    "[VICTIM CLICKED] IP: 103.45.12.90 - User-Agent: Android All /iPhone iOS All",
+                    "CAPTURED CREDENTIALS: User:পাসওয়ার্ড পেতে পেইড ভার্সন ক্রয় করুন!'"
+                ]
+            },
+            ransom: {
+                title: "🔒 RANSOMWARE ENCRYPTOR SIMULATOR",
+                placeholder: "Directory Path (e.g. C:/Users/Documents)",
+                defaultTarget: "D:/Company_Financials/",
+                logs: [
+                    "Generating 4096-bit RSA Master Key Pair...",
+                    "Scanning directory tree recursively...",
+                    "Encrypting file: Tax_Returns.pdf [AES-256]",
+                    "Encrypting file: Database_Backup.sql [AES-256]",
+                    "Encrypting file: Executive_Photos.zip [AES-256]",
+                    "Deleting Volume Shadow Copies (vssadmin delete shadows)...",
+                    "Dropping Ransom Note: RANSOM_INFO.txt",
+                    "System Encryption Complete! System Locked."
+                ]
+            },
+            keylog: {
+                title: "⌨️ KEYLOGGER LIVE STREAM",
+                placeholder: "Host Target ID (e.g. WORKSTATION-01)",
+                defaultTarget: "DESKTOP-NADIM-PC",
+                logs: [
+                    "Hooking user32.dll SetWindowsHookExW...",
+                    "Keylogger hook established silently.",
+                    "Listening for active keystrokes...",
+                    "[Keystrokes]: facebook.com [ENTER]",
+                    "[Keystrokes]: nadim_official@gmail.com [TAB]",
+                    "[Keystrokes]: mySuperSecretPassword2026 [ENTER]",
+                    "[Keystrokes]: bank_account_login_pin: PIN পেতে পেইড ভার্সন ক্রয় করুন",
+                    "Syncing keystroke logs to C2 Server..."
+                ]
+            },
+            osint: {
+                title: "🕵️ OSINT & SOCIAL TRACKER",
+                placeholder: "Target Username / Phone (e.g. @john_doe)",
+                defaultTarget: "nadim_cyber_01",
+                logs: [
+                    "Querying 350+ Social Media Platforms...",
+                    "Facebook Account: FOUND",
+                    "GitHub Repository: FOUND (3 Public Repos)",
+                    "Telegram User ID: FOUND [ID পেতে পেইড ভার্সন ক্রয় করুন]",
+                    "Checking Leaked Database Breaches (HaveIBeenPwned)...",
+                    "Breached in 2 Data Dumps (2023, 2025)",
+                    "Geolocating IP footprint: Chittagong, Bangladesh",
+                    "OSINT Profile generated successfully."
+                ]
+            },
+            satellite: {
+                title: "🛰️ SATELLITE & DRONE INTERCEPT",
+                placeholder: "Frequency / Satellite ID (e.g. NOAA-19)",
+                defaultTarget: "SATCOM-DEFENSE-GRID-4",
+                logs: [
+                    "Tuning Software Defined Radio (SDR) to 1.545 GHz...",
+                    "Locking onto Orbital Satellite Telemetry...",
+                    "Bypassing AES-128 RF Payload Encryption...",
+                    "Decoding Live Telemetry Stream...",
+                    "GPS Coordinates Intercepted: Lat 22.3569, Long 91.7832",
+                    "Video Feed Downlink Stream Established [HD পেতে পেইড ভার্সন ক্রয় করুন]",
+                    "Signal Intercept Complete!"
+                ]
+            }
+        };
+
+        function switchModule(modKey) {
+            if(isRunning) return;
+            currentModule = modKey;
+            
+            document.querySelectorAll('.menu-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const mod = modules[modKey];
+            document.getElementById('module-title').innerText = mod.title;
+            const input = document.getElementById('target-input');
+            input.placeholder = mod.placeholder;
+            input.value = mod.defaultTarget;
+
+            logToTerminal(`[SYSTEM] Switched active module to: ${mod.title}`, 'info');
+        }
+
+        function logToTerminal(text, type = 'info') {
+            const term = document.getElementById('terminal');
+            const line = document.createElement('div');
+            line.className = `terminal-line ${type}`;
+            const timestamp = new Date().toLocaleTimeString();
+            line.innerText = `[${timestamp}] ${text}`;
+            term.appendChild(line);
+            term.scrollTop = term.scrollHeight;
+        }
+
+        function runAttack() {
+            if (isRunning) return;
+            
+            const targetVal = document.getElementById('target-input').value.trim();
+            if(!targetVal) {
+                alert('Please enter a valid target parameter!');
+                return;
+            }
+
+            isRunning = true;
+            document.getElementById('exec-btn').innerText = "RUNNING...";
+            document.getElementById('exec-btn').style.opacity = "0.6";
+
+            const mod = modules[currentModule];
+            const logs = mod.logs;
+            let step = 0;
+            const pBar = document.getElementById('p-bar');
+            const pText = document.getElementById('p-text');
+
+            logToTerminal(`[START] Executing ${mod.title} on Target: ${targetVal}`, 'warn');
+
+            const interval = setInterval(() => {
+                step++;
+                const percent = Math.round((step / logs.length) * 100);
+                pBar.style.width = percent + '%';
+                pText.innerText = `PROCESSING - ${percent}%`;
+
+                let logType = 'info';
+                if(percent > 80) logType = 'success';
+                else if(step % 2 === 0) logType = 'warn';
+
+                logToTerminal(`> ${logs[step - 1]}`, logType);
+
+                if (step >= logs.length) {
+                    clearInterval(interval);
+                    isRunning = false;
+                    document.getElementById('exec-btn').innerText = "EXECUTE SIMULATION";
+                    document.getElementById('exec-btn').style.opacity = "1";
+                    pText.innerText = "SIMULATION COMPLETE - 100%";
+                    logToTerminal(`[FINISH] Operation completed successfully for target: ${targetVal}`, 'success');
+                }
+            }, 900);
+        }
+    </script>
+</body>
+</html>
